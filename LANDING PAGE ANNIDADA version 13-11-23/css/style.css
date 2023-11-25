@@ -1,0 +1,427 @@
+/* barra de navegacion */
+
+.navbar {
+    padding:  .5rem;
+    background-color: #ffffffd2;
+}
+.navbar-collapse{
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+/* Estilos generales */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 2.5rem;
+}
+.seccion-oscura{
+    color: white;
+    background-color: rgb(43, 14, 83);
+}
+.seccion-clara{
+    color: black;
+    background-color: white;
+}
+
+.seccion-titulo{
+    /* background-color: black; */
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.seccion-texto{
+    font-size: 1.2rem;
+
+}
+
+
+
+/* seccion hero */
+
+.hero{
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+
+}
+.hero-principal{
+    padding: 3rem;
+}
+
+.hero-imagen-principal{
+    width: 40.625rem;
+
+    /* border-radius: 1%; */
+    /* margin: 20px; */
+    /* rounded-circle en bootrap */
+}
+
+/* logo lineas con animacion */
+
+#loader {
+    margin-right: 0.313rem;
+    margin-bottom: 7rem;
+    position: absolute;
+    width: 4.688rem;
+    height: 6.25rem;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#334153 50px, transparent 0),
+                      linear-gradient(red 50px, transparent 0),
+                      linear-gradient(yellow 50px, transparent 0),
+                      linear-gradient(#00BFFF 50px, transparent 0),
+                      linear-gradient(green 50px, transparent 0);
+    background-size: 10px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    animation: pillerPushUp 8s linear infinite;
+  }
+
+  #loader:after {
+    content: '';
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #32CD32;
+    border-radius: 50%;
+    animation: ballStepUp 8s linear infinite;
+  }
+
+@keyframes pillerPushUp {
+  0% , 40% , 100%{background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px}
+  50% ,  90% {background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px}
+}
+
+@keyframes ballStepUp {
+  0% {transform: translate(0, 0)}
+  5% {transform: translate(8px, -14px)}
+  10% {transform: translate(15px, -10px)}
+  17% {transform: translate(23px, -24px)}
+  20% {transform: translate(30px, -20px)}
+  27% {transform: translate(38px, -34px)}
+  30% {transform: translate(45px, -30px)}
+  37% {transform: translate(53px, -44px)}
+  40% {transform: translate(60px, -40px)}
+  50% {transform: translate(60px, 0)}
+  57% {transform: translate(53px, -14px)}
+  60% {transform: translate(45px, -10px)}
+  67% {transform: translate(37px, -24px)}
+  70% {transform: translate(30px, -20px)}
+  77% {transform: translate(22px, -34px)}
+  80% {transform: translate(15px, -30px)}
+  87% {transform: translate(7px, -44px)}
+  90% {transform: translate(0, -40px)}
+  100% {transform: translate(0, 0);}
+}
+    
+.hero-principal h2{
+    font-size: 1.3rem;
+    color: rgb(85, 50, 110);
+    font-family: 'Rubik', sans-serif;
+}
+h1{
+    font-family: 'Rubik', sans-serif;
+    color: rgb(131, 76, 170);
+    font-size: 1.8rem;
+}
+
+/* La empresa */
+.la-empresa{
+    height: 500px;
+    padding: 10px;
+}
+.la-empresa .contenedor{
+    max-width: 1000px;
+    text-align: center;
+    min-width: 300px;
+    overflow: auto;
+    
+}
+
+/* servicios */
+
+
+.servicios {
+    padding: 40px 40px 60px 40px;
+}
+
+.servicios i {
+    font-size: 2.5rem;
+    color: wheat;
+    background-color:rgb(131, 76, 170);
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+.servicios .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    transition: all 0.2s ease-in;
+}
+.servicios .columna:hover{
+    color: white;
+    background-color:rgba(19, 1, 1, 0.938);
+}
+
+.servicios-web{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/*portfolio */
+.portfolio {
+    padding: 40px 40px 60px 40px;
+    margin-bottom: 30px;
+}
+
+.portfolio i {
+    font-size: 2.5rem;
+    color: wheat;
+    background-color:rgb(131, 76, 170);
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+.portfolio .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    transition: all 0.2s ease-in;
+}
+.portfolio .columna:hover{
+    color: white;
+    background-color:rgba(20, 10, 73, 0.938);
+}
+
+/*portfolio IZQ */
+.portfolio-izq{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/*portfolio CENTRO */
+.img_portfolio_centro{
+    padding-top: 20px;
+    width: 110%;
+    border-radius: 10px;
+    padding-bottom: 40px;
+}
+.p-portfolio-centro{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+/*portfolio DER */
+.img_portfolio_derecha{
+    padding-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 35px;
+}
+.p-portfolio-derecha{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+
+/* contacto */
+.contacto .container{
+    max-width: 1100px;
+    min-width: 200px;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.contacto .rectangulo{
+    margin-top: -5rem;
+    background-color:rgb(71, 16, 112);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px;
+}
+
+.contacto .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto .descripcion{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacto button{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid wheat;
+    padding: 1.25rem 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover{
+    background-color: white;
+    color:black;
+}
+
+.contacto button i{
+    color:white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover i{
+    color: black;
+}
+
+/* footer */
+footer{
+    min-height: 150px;
+
+}
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    /* color: rgb(241, 245, 6); */
+}
+
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover{
+    background-color:white;
+    border: 2px solid  rgb(43, 14, 83);
+}
+
+.iconos-redes-sociales a:hover i{
+    color:rgb(43, 14, 83);
+}
+.derechos-de-autor{
+    font-size: 15px;
+    color: cadetblue;
+    padding: 100px;
+
+}
+
+  /* boton de wsp */
+
+  .container-boton{
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 70px;
+    right: 35px;
+    padding: 10px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
+
+
+.container-boton:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
+.boton{
+    width: 50px;
+    transition: ease 1s;
+}
+
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+
+/* Adaptable Responsive */
+
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        display: none;
+    }
+    .hero-imagen-principal{
+        width: 20rem;
+    }
+    #loader{
+        /* display: flex;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        width: 2.344rem;
+        height: 3.1rem; */
+        margin-bottom: 0rem;
+        margin-left: 1.3rem;
+    }
+    #des-inf{
+        display: flex;
+        margin-bottom: 8rem;
+    }
+    .hero-principal{
+        padding: 0.2rem;
+    }
+    .container-boton{
+        background-color: #2e6329;
+        border: 1px solid #fff;
+        position: fixed;
+        z-index: 999;
+        border-radius: 50%;
+        bottom: 50px;
+        right: 35px;
+        padding: 10px;
+        transition: ease 0.3s;
+        animation: efecto 1.2s infinite;
+    }
+    
+    
+    .container-boton:hover{
+        transform: scale(1.5);
+        transition: 0.3s;
+    }
+    
+    .boton{
+        width: 30px;
+        transition: ease 1s;
+    }   
+}
+
