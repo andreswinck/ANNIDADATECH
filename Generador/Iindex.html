@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Código QR</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #1e272e; /* Azul oscuro */
+    }
+
+    #contenedor {
+      text-align: center;
+      color: white;
+      margin-top: 20px; /* Espaciado superior */
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #codigoQR {
+      margin: 20px auto;
+    }
+
+    #logo-container {
+      margin-bottom: 20px; /* Espaciado inferior */
+      position: relative; /* Para que sea relativo al contenedor */
+    }
+
+    #logo {
+      width: 900px; /* Ancho de la imagen */
+      height: 300px; /* Alto de la imagen */
+      margin-bottom: 20px; /* Espaciado inferior */
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+
+  <div id="logo-container">
+    <img id="logo" src="logo.png" alt="Logo">
+  </div>
+
+  <div id="contenedor">
+    <label for="texto"></label>
+    <input type="text" id="texto" placeholder="Ingrese Url">
+
+    <button onclick="generarCodigoQR()">Generar Código QR</button>
+    <div id="codigoQR"></div>
+  </div>
+
+  <script>
+    function generarCodigoQR() {
+      // Obtener el texto ingresado por el usuario
+      var texto = document.getElementById('texto').value;
+
+      // Seleccionar el contenedor donde se mostrará el código QR
+      var contenedorQR = document.getElementById('codigoQR');
+
+      // Limpiar el contenido anterior, si lo hay
+      contenedorQR.innerHTML = '';
+
+      // Crear un nuevo objeto de código QR
+      var qr = new QRious({
+        value: texto,
+        size: 300  // Modificar el tamaño del código QR
+      });
+
+      // Crear un elemento de imagen y establecer el código QR como fuente
+      var imgQR = document.createElement('img');
+      imgQR.src = qr.toDataURL();
+      imgQR.alt = 'Código QR';
+
+      // Agregar la imagen al contenedor
+      contenedorQR.appendChild(imgQR);
+    }
+  </script>
+
+</body>
+</html>
