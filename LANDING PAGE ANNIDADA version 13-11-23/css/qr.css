@@ -1,0 +1,11 @@
+.QRcontainer{
+    /* width: 50%;
+    height: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    padding-top: 50px;
+    background-color: rgb(7, 28, 59);
+}
